@@ -28,6 +28,8 @@ pip install djangorestframework-hstore
 
 ## Setup
 
+install the above dependacies using an admin command promp / terminal
+
 run this  sql on the database linked to the project - easy using pgadmin3
 
 CREATE EXTENSION hstore;
