@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'NewsBlog',
+    'django.contrib.postgres',
+    "django_hstore",
 )
 
 MIDDLEWARE_CLASSES = (

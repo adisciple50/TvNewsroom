@@ -2,35 +2,34 @@ from django.db import models
 from django.contrib.auth import models as auth
 from django.contrib.auth.models import User
 from django.db.models import permalink
+from django.contrib.postgres.operations import HStoreExtension
+from adminsortable.models import SortableMixin
 
-#https://github.com/iambrandontaylor/django-admin-sortable
+# https://github.com/iambrandontaylor/django-admin-sortable
+# http://djangonauts.github.io/django-hstore
 
 
 # Create your models here.
+# postgresql setup
 
-class Blog(models.Model):
-    title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True)
-    body = models.TextField()
-    posted = models.DateField(db_index=True, auto_now_add=True)
-    category = models.ForeignKey('NewsBlog.Category')
-    author = models.ForeignKey(User, null=True, blank=True)
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_blog_post', None, { 'slug': self.slug })
+class Migration(migrations.Migration):
+    ...
+
+    operations = [
+        HStoreExtension(),
+        ...
+    ]
+
+class NewsArticle(SortableMixin):
+    class Meta:
+        verbose_name = 'My Sortable Class'
+        verbose_name_plural = 'My Sortable Classes'
+        ordering = ['the_order']
+
+    picture = models.ImageField(blank=True)
+    title = models.CharField(max_length=120)
+    slidetexts = HStoreExtension
 
     def __unicode__(self):
-        return '%s' % self.title
-
-
-class Category(models.Model):
-    title = models.CharField(max_length=100, db_index=True)
-    slug = models.SlugField(max_length=100, db_index=True)
-
-    def __unicode__(self):
-        return '%s' % self.title
-
-    @permalink
-    def get_absolute_url(self):
-        return ('view_blog_category', None, { 'slug': self.slug })
+        return self.title

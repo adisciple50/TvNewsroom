@@ -1,8 +1,7 @@
 from django.contrib import admin
-from NewsBlog.models import Blog, Category
+from NewsBlog.models import NewsArticle
+from adminsortable.admin import SortableAdmin
 # Register your models here.
 
 
-
-admin.site.register(Blog)
-admin.site.register(Category)
+admin.site.register(NewsArticle, SortableAdmin)
