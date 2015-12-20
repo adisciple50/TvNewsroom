@@ -23,6 +23,8 @@ pip install django-admin-sortable
 
 pip install django-hstore
 
+pip install djangorestframework-hstore
+
 
 ## Setup
 
