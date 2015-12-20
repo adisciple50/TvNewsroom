@@ -10,6 +10,6 @@ class ArticleViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Blog Articles to be viewed or edited.
     """
-    queryset = BlogData.Blog.objects.all().order_by('posted')
-    serializer_class = NewsSerealizers.NewsSerializer
+    queryset = BlogData.NewsArticle.objects.all().order_by('the_order')
+    serializer_class = NewsSerealizers.NewsArticleSerializer
 

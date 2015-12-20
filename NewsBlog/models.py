@@ -27,10 +27,12 @@ class NewsArticle(SortableMixin):
         ordering = ['the_order']
 
     the_order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
-    picture = models.ImageField(blank=True)
     title = models.CharField(max_length=120)
-    slidetexts = hstore.DictionaryField(max_length=2000)
-    video = models.URLField()
+    picture = models.ImageField(blank=True)
+    video = models.URLField(blank=True)
+    slidetexts = hstore.DictionaryField(max_length=2000,db_index=True)
 
     def __unicode__(self):
+        return self.title
+    def __str__(self):
         return self.title
