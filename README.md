@@ -21,7 +21,7 @@ pip install djangorestframework
 
 pip install django-admin-sortable
 
-pip install 
+pip install django-admin-sortable
 
 
 ## Setup
