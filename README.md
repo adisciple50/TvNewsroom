@@ -17,6 +17,12 @@ or
 
 http://www.lfd.uci.edu/~gohlke/pythonlibs/
 
+pip install djangorestframework
+
+pip install django-admin-sortable
+
+pip install 
+
 
 ## Setup
 
