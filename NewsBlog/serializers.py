@@ -8,4 +8,4 @@ from rest_framework_hstore.serializers import HStoreSerializer
 class NewsArticleSerializer(HStoreSerializer):
     class Meta:
         model = NewsBlogging.NewsArticle
-        fields =
+        fields = ['title','picture','slidetexts','video','the_order']
