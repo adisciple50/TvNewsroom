@@ -12,3 +12,7 @@ Django
 
 
 pip install git+https://github.com/nwcell/psycopg2-windows.git@win64-py34#egg=psycopg2
+
+or
+
+http://www.lfd.uci.edu/~gohlke/pythonlibs/
