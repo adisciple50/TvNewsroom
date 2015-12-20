@@ -16,3 +16,10 @@ pip install git+https://github.com/nwcell/psycopg2-windows.git@win64-py34#egg=ps
 or
 
 http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+
+#Setup
+
+run this  sql on the database linked to the project - easy using pgadmin3
+
+CREATE EXTENSION hstore;
