@@ -1,9 +1,11 @@
 from rest_framework import serializers
 from NewsBlog import models as NewsBlogging
-
+from rest_framework_hstore.serializers import HStoreSerializer
 #  http://www.django-rest-framework.org/tutorial/quickstart/#quickstart
 
-class NewsSerializer(serializers.HyperlinkedModelSerializer):
+
+
+class NewsArticleSerializer(HStoreSerializer):
     class Meta:
-        model = NewsBlogging.Blog
-        fields = ('title','slug','body','posted','category','userName')
+        model = NewsBlogging.NewsArticle
+        fields =
