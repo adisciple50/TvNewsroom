@@ -1,14 +1,14 @@
 # TvNewsroom
 An Article Rest server with emergency broadcasts
 
-# Prerequisits
+## Prerequisits
 
 
 Postgresql
 
 Django
 
-# Dependacies
+## Dependacies
 
 
 pip install git+https://github.com/nwcell/psycopg2-windows.git@win64-py34#egg=psycopg2
@@ -18,7 +18,7 @@ or
 http://www.lfd.uci.edu/~gohlke/pythonlibs/
 
 
-#Setup
+## Setup
 
 run this  sql on the database linked to the project - easy using pgadmin3
 
