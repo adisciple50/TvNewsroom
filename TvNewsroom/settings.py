@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    # admin bootstrap theme MUST come first
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.postgres',
     'django_hstore',
     'adminsortable',
-    'django_admin_bootstrapped',
+
 )
 
 MIDDLEWARE_CLASSES = (
