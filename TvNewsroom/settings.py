@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.postgres',
     'django_hstore',
     'adminsortable',
+    'django_admin_bootstrapped',
 )
 
 MIDDLEWARE_CLASSES = (
