@@ -8,6 +8,10 @@ Postgresql
 
 Django
 
+python 3.5
+
+sphinx
+
 ## Dependacies
 
 
