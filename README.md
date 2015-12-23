@@ -29,7 +29,7 @@ pip install django-hstore
 
 pip install djangorestframework-hstore
 
-pip install django-admin-bootstrapped
+pip install django-grappelli
 
 
 ## Setup

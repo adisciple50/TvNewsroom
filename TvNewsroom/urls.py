@@ -26,6 +26,7 @@ router.register(r'Articles', Blogviews.ArticleViewSet)
 
 
 urlpatterns = [
+    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', include(admin.site.urls)),
     # Wire up our API using automatic URL routing.
     # Additionally, we include login URLs for the browsable API.
