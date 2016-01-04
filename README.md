@@ -31,6 +31,10 @@ pip install djangorestframework-hstore
 
 pip install django-grappelli
 
+pip install psycogreen
+
+pip install -e git+https://github.com/abourget/gevent-socketio.git#egg=gevent_socketio-dev
+
 
 ## Setup
 
